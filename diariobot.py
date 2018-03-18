@@ -347,6 +347,7 @@ class Query_message:
             f = open(cartella + "temp","w")
             for x in os.listdir(cartella + self.text):
                 f.write(x)
+                f.write("\n")
             f.close()
             f = str(open(cartella + "temp","r").read())
             try:
@@ -370,6 +371,7 @@ class Query_message:
             f = open(cartella + "temp","w")
             for x in os.listdir(Query_message.tempdir + self.text):
                 f.write(x)
+                f.write("\n")
             f.close()
             f = str(open(cartella + "temp","r").read())
             try:
@@ -445,6 +447,7 @@ class Query_message:
             f = open(cartella + "temp","w")
             for x in os.listdir(cartella + self.text):
                 f.write(x)
+                f.write("\n")
             f.close()
             f = str(open(cartella + "temp","r").read())
             try:
@@ -641,7 +644,7 @@ class Query_message:
 
 
 #mi creo l'oggetto telepot
-bot = telepot.Bot("your token")
+bot = telepot.Bot("563464808:AAEZKp56Umiccx16DEJryYbb14B1_4Kr1JU")
 ##ciclo con acquisizione di dati derivanti da msg
 def handle(msg):
     ##acquisizione chat,text ed msg(contenente tutti i dati)
