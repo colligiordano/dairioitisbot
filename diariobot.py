@@ -324,7 +324,7 @@ class Query_message:
             f.close()
             f = open(cartella + "temp", "a")
             for x in os.listdir(cartella):
-                if x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp":
+                if x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp" and x != "alunni":
                     f.write("\n" + x)
             f.close()
             f = str(open(cartella + "temp","r").read())
@@ -424,7 +424,7 @@ class Query_message:
             f.close()
             f = open(cartella + "temp", "a")
             for x in os.listdir(cartella):
-                if x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp":
+                if x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp" and x != "alunni":
                     f.write("\n" + x)
             f.close()
             f = str(open(cartella + "temp","r").read())
@@ -490,7 +490,7 @@ class Query_message:
             f.close()
             f = open(cartella + "temp", "a")
             for x in os.listdir(cartella):
-                if x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp":
+                if x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp" and x != "alunni":
                     f.write("\n" + x)
             f.close()
             f = str(open(cartella + "temp","r").read())
@@ -644,7 +644,7 @@ class Query_message:
 
 
 #mi creo l'oggetto telepot
-bot = telepot.Bot("563464808:AAEZKp56Umiccx16DEJryYbb14B1_4Kr1JU")
+bot = telepot.Bot("insert your token")
 ##ciclo con acquisizione di dati derivanti da msg
 def handle(msg):
     ##acquisizione chat,text ed msg(contenente tutti i dati)
