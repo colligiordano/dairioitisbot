@@ -239,7 +239,7 @@ class Query_message:
             except:
                 print("c'e' stato un problema con il file")
             for x in os.listdir(cartella):
-                if (x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp"):
+                if (x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp" and x != "alunni"):
                     f.write("\n" + x)
             f = open(cartella + "argomenti.txt","r")
             try:
