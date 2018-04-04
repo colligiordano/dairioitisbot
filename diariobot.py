@@ -275,7 +275,11 @@ class Query_message:
                 Query_message.argomentipremuto = 0
             if os.path.isfile(cartella + "temp"):
                 os.remove(cartella + "temp")
-
+        elif self.text.startswith("/"):
+            Query_message.argomentipremuto = 0
+        else:
+            self.bot.sendMessage(self.chat,"non ci sono materie")
+            Query_message.argomentipremuto = 0
     def argomentibisbis(self,cartella):
         if os.path.isdir(Query_message.tempdir + self.text) and not self.text.startswith("/"):
                 f = open(cartella + "temp","w")
@@ -527,10 +531,10 @@ class Query_message:
             else:
                 self.bot.sendMessage(self.chat,"inserire del testo")
                 Query_message.appuntipremuto = 0
-        elif not os.path.isdir(cartella + self.text):
-            self.bot.sendMessage(self.chat,"la materia non esiste")
+        elif self.text.startswith("/"):
             Query_message.appuntipremuto = 0
         else:
+            self.bot.sendMessage(self.chat,"non ci sono materie")
             Query_message.appuntipremuto = 0
         if os.path.isfile(cartella + "temp"):
             os.remove(cartella + "temp")
@@ -644,7 +648,7 @@ class Query_message:
 
 
 #mi creo l'oggetto telepot
-bot = telepot.Bot("insert your token")
+bot = telepot.Bot("Insert Your Token")
 ##ciclo con acquisizione di dati derivanti da msg
 def handle(msg):
     ##acquisizione chat,text ed msg(contenente tutti i dati)
