@@ -240,10 +240,12 @@ class Query_message:
                 print("c'e' stato un problema con il file")
             for x in os.listdir(cartella):
                 if (x != "domani.txt" and x != "mese.txt" and x != "scuolalavoro.jpg" and x != "orario.jpg" and x != "argomenti.txt" and x != "temp" and x != "alunni"):
-                    f.write("\n" + x)
+                    f.write(x + "\n")
+                    f.close()
             f = open(cartella + "argomenti.txt","r")
+            stringa = str(f.read())
             try:
-                self.bot.sendMessage(self.chat,str(f.read()))
+                self.bot.sendMessage(self.chat,stringa)
                 self.bot.sendMessage(self.chat,"inserire la materia")
                 Query_message.argomentipremuto = 1
             except:
